@@ -32,7 +32,12 @@ class MainActivity : AppCompatActivity() {
         val txtView = findViewById<TextView>(R.id.textView)
         val btnOn = findViewById<Button>(R.id.buttonOnOff)
         val btnDisc = findViewById<Button>(R.id.buttonDisc)
+        val btnList = findViewById<Button>(R.id.buttonList)
         val adapter = BluetoothAdapter.getDefaultAdapter()
+
+        btnList.setOnClickListener {
+            Toast.makeText(applicationContext,"Perelo", Toast.LENGTH_SHORT).show()
+        }
 
         btnOn.setOnClickListener {
             if (!adapter.isEnabled) {
@@ -65,7 +70,7 @@ class MainActivity : AppCompatActivity() {
 
 
             doAsync {
-                var code:String = ""
+                var code = ""
                 try {
                     val data = URL(link).readText()
                     val parser: Parser = Parser.default()
