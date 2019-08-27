@@ -36,9 +36,7 @@ class MainActivity : AppCompatActivity() {
         val adapter = BluetoothAdapter.getDefaultAdapter()
 
         btnList.setOnClickListener {
-            val activityIntent = Intent(this, StudentListActivity::class.java)
-            startActivity(activityIntent)
-
+            Toast.makeText(applicationContext,"Perelo", Toast.LENGTH_SHORT).show()
         }
 
         btnOn.setOnClickListener {
