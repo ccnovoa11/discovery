@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="DialogTheme" parent="Theme.AppCompat.Dialog">
+        <item name="android:datePickerStyle">@color/colorPrimary</item>
+    </style>
+
 </resources>
